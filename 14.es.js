@@ -65,9 +65,24 @@ function show (a,b,...args){
   console.log(b);
   console.log(args);
 }
-show ('one','two','three','four','five')*/
+show ('one','two','three','four','five')
 //spread parameter
 let arr1 = ['one','two'];
 let arr2 = [...arr1,'three','four','five'];
 console.log(arr2);
 
+setTimeout(function () {  
+    console.log('Execute later after 1 second')  
+}, 1000);  
+*/
+var promise = new Promise(function(resolve, reject) {
+    resolve('Geeks For Geeks');
+})
+   
+promise
+    .then(function(successMessage) {
+       //success handler function is invoked
+        console.log(successMessage);
+    }, function(errorMessage) {
+        console.log(errorMessage);
+    })
